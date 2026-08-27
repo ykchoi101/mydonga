@@ -14,22 +14,7 @@ from langchain_core.prompts import ChatPromptTemplate
 #1 모델기술
 model = ChatOllama(model='gemma3:latest')
 
-# model = ChatOpenAI(model='gpt-4o-mini')   유료 openai
-# api_key = os.getenv('OPENROUTER_API_KEY')
-# model = ChatOpenAI(
-#   model='openai/gpt-oss-20b:free', 
-#   openai_api_key=api_key, 
-#   openai_api_base='https://openrouter.ai/api/v1'
-# )
 
-
-# 더권장
-# api_key = os.getenv('OPENROUTER_API_KEY')
-# model = ChatOpenAI(
-#     model          = "openai/gpt-4o-mini",        
-#     openai_api_key = api_key,
-#     base_url       = "https://openrouter.ai/api/v1" 
-# )
 
 #2 프롬프트 템플릿
 prompt = ChatPromptTemplate([
@@ -42,3 +27,4 @@ chain = prompt | model | StrOutputParser()
 result = chain.invoke({'question':'미녀와야수'})
 print(result)
 
+깃허브에서 수정된 내용 체크!!
