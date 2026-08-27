@@ -27,4 +27,4 @@ chain = prompt | model | StrOutputParser()
 result = chain.invoke({'question':'미녀와야수'})
 print(result)
 
-깃허브에서 수정된 내용 체크!!
+# 깃허브에서 수정된 내용 체크!!
